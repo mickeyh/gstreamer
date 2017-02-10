@@ -43,6 +43,7 @@ gst_check = shared_library('gstcheck-@0@'.format(apiversion),
   include_directories : [configinc, libsinc],
   link_with : [libcheck],
   dependencies : [gobject_dep, glib_dep, gst_dep],
+  name_prefix : 'lib',
 )
 
 gst_check_dep = declare_dependency(link_with : gst_check,

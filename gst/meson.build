@@ -221,6 +221,7 @@ if libtype != 'static'
     install : true,
     dependencies : [gobject_dep, gmodule_dep, glib_dep, mathlib] + platform_deps,
     vs_module_defs: vs_module_defs_dir + 'libgstreamer.def',
+    name_prefix : 'lib',
   )
   libgst = libgst_shared
   if build_gir

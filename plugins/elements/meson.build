@@ -44,6 +44,7 @@ if libtype != 'static'
     dependencies : [gobject_dep, glib_dep, gst_dep, gst_base_dep],
     install : true,
     install_dir : '@0@/gstreamer-1.0'.format(get_option('libdir')),
+    name_prefix : 'lib',
   )
   gst_elements = gst_elements_shared
 endif
